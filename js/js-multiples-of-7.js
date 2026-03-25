@@ -19,7 +19,7 @@ function addMultipleCard(number, position) {
   badge.textContent = `Multiplo ${position}`;
 
   const heading = document.createElement("h3");
-  heading.textContent = `${number} es multiplo de 7`;
+  heading.textContent = `${number} es múltiplo de 7`;
 
   const explanation = document.createElement("p");
   explanation.textContent =
@@ -62,14 +62,14 @@ for (let number = 1; number <= 100; number += 1) {
     multiplesCount += 1;
     multiplesOfSeven.push(number);
 
-    console.log(`${number} es multiplo de 7`);
-    addConsoleLine(`${number} es multiplo de 7`);
+    console.log(`${number} es múltiplo de 7`);
+    addConsoleLine(`${number} es múltiplo de 7`);
     addMultipleCard(number, multiplesCount);
   }
 }
 
 const finalMessage =
-  `Cantidad total de multiplos de 7 entre 1 y 100: ${multiplesCount}.`;
+  `Cantidad total de múltiplos de 7 entre 1 y 100: ${multiplesCount}.`;
 
 console.log(finalMessage);
 addConsoleLine("Resultado final", "step");
@@ -80,14 +80,14 @@ sequenceOutput.textContent = multiplesOfSeven.join(", ");
 
 addSummaryCard(
   "for",
-  "Recorre todos los numeros",
+  "Recorre todos los números",
   "El bucle visita cada valor entre 1 y 100 para comprobarlo una sola vez.",
 );
 
 addSummaryCard(
   "if",
-  "Filtra solo los multiplos de 7",
-  "La condicion number % 7 === 0 separa los numeros validos del resto.",
+  "Filtra solo los múltiplos de 7",
+  "La condición number % 7 === 0 separa los números válidos del resto.",
 );
 
 addSummaryCard(

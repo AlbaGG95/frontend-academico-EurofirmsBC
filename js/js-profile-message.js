@@ -11,7 +11,7 @@ const programmingMessage = likesProgramming
   ? "me gusta programar"
   : "no me gusta programar";
 
-const finalMessage = `Hola, mi nombre es ${studentName}, tengo ${studentAge} años y ${programmingMessage}.`;
+const finalMessage = `Hola, mi nombre es ${studentName}, tengo ${studentAge} aÃ±os y ${programmingMessage}.`;
 
 function addConsoleLine(text, type) {
   const line = document.createElement("span");
