@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Variables y Tipos en JavaScript</title>
+  <script src="../../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../../css/exercise-theme.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <main id="contenido" class="exercise-page">
+    <a class="exercise-back" href="../../hub/javascript-react.html">Volver a JavaScript</a>
+
+    <section class="exercise-hero">
+      <span class="exercise-kicker">Primer ejercicio de JavaScript</span>
+      <h1 class="exercise-title">Variables, reasignaciones y tipo de dato en JavaScript.</h1>
+      <p class="exercise-copy">
+        Esta práctica trabaja una sola variable para comprobar cómo cambia su
+        valor y su tipo al reasignarla. También muestra qué ocurre cuando se
+        intenta redeclarar con <code>let</code> o reasignar usando
+        <code>const</code>. La idea es que cada paso se lea casi como si fuera
+        una explicación de clase.
+      </p>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Objetivo del ejercicio</h2>
+          <p class="exercise-note">
+            El código se ejecuta con JavaScript puro y deja la salida tanto en
+            pantalla como en la consola del navegador para que puedas seguir la
+            evolución de <code>myVar</code> paso a paso. La misma variable va
+            cambiando para que se vea con claridad que en JavaScript una
+            variable puede almacenar distintos tipos de dato.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-grid">
+        <article class="exercise-item">
+          <strong>Paso 1</strong>
+          <h3>Crear la variable</h3>
+          <p>
+            Se declara <code>let myVar = 0</code> como punto de partida del
+            ejercicio, porque <code>let</code> sí permite reasignar el valor
+            más adelante.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Pasos 2-5</strong>
+          <h3>Reasignar e inspeccionar</h3>
+          <p>
+            La misma variable pasa por <code>0</code>, <code>4.5</code>,
+            <code>"John Doe"</code> y <code>false</code>, comprobando siempre
+            su contenido y <code>typeof</code> para ver cómo cambia el tipo.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Paso 6</strong>
+          <h3>Comparar let y const</h3>
+          <p>
+            Se documenta qué error aparece al intentar redeclarar con
+            <code>let</code> o al intentar cambiar el valor de una constante.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Vista tipo consola</h2>
+          <p class="exercise-note">
+            Este bloque reproduce el orden de salida que verías en la consola
+            del navegador. Así puedes estudiar el ejercicio sin salir de la web.
+          </p>
+        </div>
+      </div>
+
+      <div class="console-shell" aria-label="Salida visual de consola">
+        <div class="console-topbar" aria-hidden="true">
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+          <span class="console-label">Consola del ejercicio</span>
+        </div>
+        <div class="console-output" id="js-console-output" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Salida del ejercicio</h2>
+          <p class="exercise-note">
+            Cada tarjeta corresponde a un paso real del ejercicio. Primero ves
+            el valor guardado y después el tipo de dato que detecta JavaScript.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-grid" id="js-results" aria-live="polite"></div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Comprobación con let y const</h2>
+          <p class="exercise-note">
+            Aquí se muestran los errores esperados al cambiar la forma de
+            declarar o reasignar la variable, con una explicación breve para
+            que el comportamiento se entienda mejor.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-grid" id="js-experiments" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="../../../js/js-variable-types.js"></script>
+</body>
+</html>
+
+
+
+
+

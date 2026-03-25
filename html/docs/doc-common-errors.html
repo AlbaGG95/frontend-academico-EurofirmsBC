@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Errores comunes | Mi Hub de Desarrollo</title>
+  <script src="../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../css/hub-pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <div class="page">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="logo" href="../hub/index.html">
+        <div class="logo-mark">AD</div>
+        <div class="logo-copy">
+          <span class="logo-title">Alba Dev Hub</span>
+          <span class="logo-subtitle">Mi portfolio y mis prácticas</span>
+        </div>
+      </a>
+
+      <ul class="menu">
+        <li><a href="../hub/portfolio.html">Portafolio</a></li>
+        <li><a href="../hub/html-css.html">HTML y CSS</a></li>
+        <li><a class="active" href="../hub/documentation.html">Documentación</a></li>
+        <li><a href="../hub/javascript-react.html">JavaScript</a></li>
+      </ul>
+
+      <a class="cta" href="../hub/documentation.html">Volver a documentación</a>
+    </nav>
+
+    <header class="hero">
+      <section class="hero-panel">
+        <span class="eyebrow">Errores comunes</span>
+        <h1>Aquí apunto fallos que no quiero repetir.</h1>
+        <p class="hero-text">
+          Esta página me sirve como checklist rápida cuando algo no funciona y
+          no quiero volver a perder tiempo por lo mismo.
+        </p>
+      </section>
+    </header>
+
+    <main id="contenido" class="content">
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Checklist</div>
+            <h2>Lo que quiero revisar antes de bloquearme</h2>
+            <p class="section-copy">
+              Esta página funciona mejor si la leo como una lista de comprobacion
+              rápida, no como teoría larga.
+            </p>
+          </div>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <span class="card-tag">Rutas</span>
+            <ul class="doc-list">
+              <li>Comprobar que el archivo existe de verdad.</li>
+              <li>Usar rutas locales claras como <code>./archivo.html</code>.</li>
+              <li>No depender de `127.0.0.1` si solo estoy abriendo HTML estatico.</li>
+            </ul>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">HTML</span>
+            <ul class="doc-list">
+              <li>Revisar etiquetas sin cerrar.</li>
+              <li>Comprobar anidacion.</li>
+              <li>No abusar de `div` cuando una etiqueta semántica encaja mejor.</li>
+            </ul>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">CSS</span>
+            <ul class="doc-list">
+              <li>Poner `box-sizing: border-box`.</li>
+              <li>Probar `gap` antes de pelearme con margenes.</li>
+              <li>Revisar el padre flex antes de tocar los hijos.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

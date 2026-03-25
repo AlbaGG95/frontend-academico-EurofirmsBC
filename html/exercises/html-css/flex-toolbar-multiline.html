@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolbar Multi-fila con Flexbox</title>
+  <script src="../../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../../css/exercise-theme.css" />
+  <style>
+    .toolbar-shell {
+      width: min(100%, 980px);
+      margin: 0 auto;
+      padding: 14px;
+      border: 1px solid rgba(31, 95, 99, 0.14);
+      border-radius: 18px;
+      background: var(--surface-muted);
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border: 1px solid rgba(31, 95, 99, 0.18);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .gp {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .gp-brand {
+      padding: 0 2px;
+      color: var(--text-main);
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .gp-search {
+      flex: 1 1 280px;
+      min-width: 220px;
+    }
+
+    .gp-search input {
+      width: 100%;
+      min-height: 34px;
+      border: 1px solid rgba(31, 95, 99, 0.24);
+      border-radius: 8px;
+      padding: 7px 10px;
+      color: var(--text-main);
+      background: var(--surface);
+      outline: none;
+    }
+
+    .gp-search input:focus {
+      border-color: rgba(31, 95, 99, 0.55);
+      box-shadow: 0 0 0 2px rgba(31, 95, 99, 0.12);
+    }
+
+    .gp-primary,
+    .gp-secondary {
+      flex: 0 1 auto;
+    }
+
+    .gp-user {
+      margin-inline-start: auto;
+      min-width: max-content;
+      white-space: nowrap;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .btn {
+      min-height: 32px;
+      padding: 6px 12px;
+      border: 1px solid rgba(31, 95, 99, 0.22);
+      border-radius: 8px;
+      color: #17202b;
+      background: var(--surface);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      border-color: rgba(31, 95, 99, 0.4);
+      background: rgba(235, 243, 240, 0.95);
+    }
+
+    .btn-ghost {
+      background: var(--surface-muted);
+    }
+
+    .btn-primary {
+      border-color: rgba(31, 95, 99, 0.45);
+      color: var(--cta-text);
+      background: linear-gradient(145deg, var(--cta-start), var(--cta-end));
+    }
+
+    .avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid rgba(31, 95, 99, 0.2);
+      object-fit: cover;
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <main id="contenido" class="exercise-page">
+    <a class="exercise-back" href="../../hub/html-css.html">Volver a HTML y CSS</a>
+
+    <section class="exercise-hero">
+      <span class="exercise-kicker">Ejercicio avanzado de Flexbox</span>
+      <h1 class="exercise-title">Toolbar multi-fila y autoajustable con grupos funcionales.</h1>
+      <p class="exercise-copy">
+        Esta práctica resuelve una barra de herramientas con distintos niveles
+        de prioridad: marca, búsqueda, acciones principales, acciones
+        secundarias y bloque de usuario. El objetivo es mantener orden lógico
+        incluso cuando el ancho disponible se reduce.
+      </p>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Resultado visual</h2>
+          <p class="exercise-note">
+            La barra conserva una jerarquía estable al hacer wrap. Esto la hace
+            útil como patrón para paneles de administración, interfaces de
+            trabajo o futuros proyectos con más funcionalidad.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-stage">
+        <div class="toolbar-shell">
+          <nav class="toolbar" aria-label="Toolbar autoajustable">
+            <div class="gp gp-brand">
+              <strong>MIAPP</strong>
+            </div>
+
+            <div class="gp gp-search">
+              <input type="search" placeholder="Buscar..." aria-label="Buscar" />
+              <button class="btn btn-ghost" type="button">Ir</button>
+            </div>
+
+            <div class="gp gp-primary">
+              <button class="btn" type="button">Nuevo</button>
+              <button class="btn btn-primary" type="button">Guardar</button>
+            </div>
+
+            <div class="gp gp-secondary">
+              <button class="btn btn-ghost" type="button">Compartir</button>
+              <button class="btn btn-ghost" type="button">Exportar</button>
+            </div>
+
+            <div class="gp gp-user">
+              <img
+                class="avatar"
+                src="../../../assets/profile/alba-avatar.jpg"
+                alt="Retrato de Alba"
+                loading="lazy"
+                onerror="this.src='../../../assets/profile/alba-avatar.png';"
+              />
+              <span>Alba</span>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <div class="exercise-grid">
+        <article class="exercise-item">
+          <strong>Regla 1</strong>
+          <h3>Contenedor con wrap</h3>
+          <p>
+            <code>display: flex</code> y <code>flex-wrap: wrap</code> permiten
+            reorganizar la interfaz sin perder el orden de lectura.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Regla 2</strong>
+          <h3>Buscador expansivo</h3>
+          <p>
+            <code>flex: 1 1 280px</code> hace que la búsqueda ocupe el espacio
+            central disponible sin romper la barra.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Regla 3</strong>
+          <h3>Jerarquía de acciones</h3>
+          <p>
+            El usuario queda alineado al extremo gracias a
+            <code>margin-inline-start: auto</code>, incluso al pasar a otra fila.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
+
+

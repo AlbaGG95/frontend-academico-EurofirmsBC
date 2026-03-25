@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM y eventos | Mi Hub de Desarrollo</title>
+  <script src="../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../css/hub-pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <div class="page">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="logo" href="../hub/index.html">
+        <div class="logo-mark">AD</div>
+        <div class="logo-copy">
+          <span class="logo-title">Alba Dev Hub</span>
+          <span class="logo-subtitle">Mi portfolio y mis prácticas</span>
+        </div>
+      </a>
+      <ul class="menu">
+        <li><a href="../hub/portfolio.html">Portafolio</a></li>
+        <li><a href="../hub/html-css.html">HTML y CSS</a></li>
+        <li><a class="active" href="../hub/documentation.html">Documentación</a></li>
+        <li><a href="../hub/javascript-react.html">JavaScript</a></li>
+      </ul>
+      <a class="cta" href="doc-js-base.html">Volver a JavaScript</a>
+    </nav>
+
+    <header class="hero">
+      <section class="hero-panel">
+        <span class="eyebrow">DOM y eventos</span>
+        <h1>Aquí junto la parte de interacción con la página.</h1>
+        <p class="hero-text">
+          Esta ficha me interesa porque conecta la lógica con el navegador y me
+          prepara para formularios, botones y cambios visuales.
+        </p>
+      </section>
+    </header>
+
+    <main id="contenido" class="content">
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Ficha de estudio</div>
+            <h2>Lo que quiero tener claro</h2>
+          </div>
+        </div>
+
+        <div class="study-grid">
+          <article class="study-card">
+            <span class="card-tag">Objetivo</span>
+            <h3>Selecciónar, escuchar y cambiar</h3>
+            <p>
+              Quiero pensar el DOM como una secuencia simple: seleccióno un nodo, escucho un evento y cambio algo.
+            </p>
+          </article>
+
+          <article class="study-card">
+            <span class="card-tag">Error comun</span>
+            <h3>No selecciónar bien el elemento</h3>
+            <p>
+              Si el selector falla o devuelve `null`, todo lo demas se rompe aunque la lógica sea correcta.
+            </p>
+          </article>
+
+          <article class="study-card">
+            <span class="card-tag">Regla</span>
+            <h3>Probar primero con un boton simple</h3>
+            <p>
+              Antes de hacer algo complejo, me ayuda validar el flujo con un click y un cambio pequeno.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Base</div>
+            <h2>Conceptos que quiero dominar</h2>
+          </div>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <span class="card-tag">Selección</span>
+            <p>`querySelector` y `querySelectorAll` para localizar elementos.</p>
+          </article>
+          <article class="doc-card">
+            <span class="card-tag">Eventos</span>
+            <p>`addEventListener` para reaccionar a clicks, input, submit y otros eventos.</p>
+          </article>
+          <article class="doc-card">
+            <span class="card-tag">Cambios</span>
+            <p>`textContent`, `innerHTML`, clases o estilos para actualizar la interfaz.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Ejemplo minimo</div>
+            <h2>Click que cambia texto</h2>
+          </div>
+        </div>
+
+        <article class="doc-card">
+          <code class="code-block">const boton = document.querySelector(".boton");
+const titulo = document.querySelector(".titulo");
+
+boton.addEventListener("click", () => {
+  titulo.textContent = "Texto actualizado";
+});</code>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

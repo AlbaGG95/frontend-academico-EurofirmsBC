@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentación HTML | Mi Hub de Desarrollo</title>
+  <script src="../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../css/hub-pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <div class="page">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="logo" href="../hub/index.html">
+        <div class="logo-mark">AD</div>
+        <div class="logo-copy">
+          <span class="logo-title">Alba Dev Hub</span>
+          <span class="logo-subtitle">Mi portfolio y mis prácticas</span>
+        </div>
+      </a>
+
+      <ul class="menu">
+        <li><a href="../hub/portfolio.html">Portafolio</a></li>
+        <li><a href="../hub/html-css.html">HTML y CSS</a></li>
+        <li><a class="active" href="../hub/documentation.html">Documentación</a></li>
+        <li><a href="../hub/javascript-react.html">JavaScript</a></li>
+      </ul>
+
+      <a class="cta" href="../hub/documentation.html">Volver a documentación</a>
+    </nav>
+
+    <header class="hero">
+      <section class="hero-panel">
+        <span class="eyebrow">HTML</span>
+        <h1>Aquí dejo mi base de estructura y semántica.</h1>
+        <p class="hero-text">
+          Esta ficha me sirve para recordar las etiquetas que más voy a usar y
+          la forma en la que quiero ordenar una página desde el principio.
+        </p>
+      </section>
+
+      <aside class="hero-side">
+        <div class="stat-card">
+          <div class="stat-label">Objetivo</div>
+          <div class="stat-value">Orden</div>
+          <p class="stat-note">
+            Si la estructura esta clara desde el HTML, luego el CSS se vuelve
+            mucho más fácil de manejar.
+          </p>
+        </div>
+      </aside>
+    </header>
+
+    <main id="contenido" class="content">
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Ficha de estudio</div>
+            <h2>Lo que quiero tener claro antes de escribir HTML</h2>
+            <p class="section-copy">
+              Para que esta página me resulte útil de verdad, dejo siempre el
+              mismo esquema: objetivo, conceptos clave, errores y ejemplo.
+            </p>
+          </div>
+        </div>
+
+        <div class="study-grid">
+          <article class="study-card">
+            <span class="card-tag">Objetivo</span>
+            <h3>Dar una estructura clara al contenido</h3>
+            <p>
+              Si el HTML esta bien planteado, luego me cuesta menos aplicar CSS
+              y entender que parte de la página estoy tocando.
+            </p>
+          </article>
+
+          <article class="study-card">
+            <span class="card-tag">Criterio</span>
+            <h3>Usar semántica cuando tenga sentido</h3>
+            <p>
+              Intento no tirar de `div` por defecto si una etiqueta como
+              `header`, `nav`, `section` o `article` encaja mejor.
+            </p>
+          </article>
+
+          <article class="study-card">
+            <span class="card-tag">Error comun</span>
+            <h3>Montar la estructura sin pensar</h3>
+            <p>
+              Si empiezo a poner contenedores sin criterio, luego me cuesta
+              mucho más encontrar el sitio correcto para estilos y clases.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Conceptos clave</div>
+            <h2>Etiquetas que quiero usar con sentido</h2>
+          </div>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <span class="card-tag">Cabecera</span>
+            <h3>`header` y `nav`</h3>
+            <p>
+              `header` me sirve para la cabecera general o la cabecera de una
+              seccion. `nav` lo uso cuando el contenido principal son enlaces de
+              navegacion.
+            </p>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Contenido</span>
+            <h3>`main`, `section` y `article`</h3>
+            <p>
+              `main` envuelve el contenido principal de la página. `section` me
+              viene bien para bloques tematicos y `article` para piezas con
+              sentido propio.
+            </p>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Cierre</span>
+            <h3>`footer`</h3>
+            <p>
+              Lo uso para pies de página o de bloque cuando necesito información
+              de cierre, enlaces secundarios o creditos.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Ejemplo minimo</div>
+            <h2>Estructura base que puedo reutilizar</h2>
+          </div>
+        </div>
+
+        <article class="doc-card">
+          <code class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Mi página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;&lt;/header&gt;
+  &lt;main&gt;
+    &lt;section&gt;&lt;/section&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+          <div class="mini-note">
+            Si puedo empezar con una estructura limpia, luego tardo menos en
+            colocar clases y estilos.
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

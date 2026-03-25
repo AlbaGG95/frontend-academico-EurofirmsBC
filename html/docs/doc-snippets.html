@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snippets | Mi Hub de Desarrollo</title>
+  <script src="../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../css/hub-pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <div class="page">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="logo" href="../hub/index.html">
+        <div class="logo-mark">AD</div>
+        <div class="logo-copy">
+          <span class="logo-title">Alba Dev Hub</span>
+          <span class="logo-subtitle">Mi portfolio y mis prácticas</span>
+        </div>
+      </a>
+
+      <ul class="menu">
+        <li><a href="../hub/portfolio.html">Portafolio</a></li>
+        <li><a href="../hub/html-css.html">HTML y CSS</a></li>
+        <li><a class="active" href="../hub/documentation.html">Documentación</a></li>
+        <li><a href="../hub/javascript-react.html">JavaScript</a></li>
+      </ul>
+
+      <a class="cta" href="../hub/documentation.html">Volver a documentación</a>
+    </nav>
+
+    <header class="hero">
+      <section class="hero-panel">
+        <span class="eyebrow">Snippets</span>
+        <h1>Aquí voy guardando código base que me ahorra tiempo.</h1>
+        <p class="hero-text">
+          Quiero tener pequenas plantillas para arrancar rápido sin escribir
+          siempre lo mismo desde cero.
+        </p>
+      </section>
+    </header>
+
+    <main id="contenido" class="content">
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Biblioteca base</div>
+            <h2>Codigo que quiero poder reutilizar rápido</h2>
+            <p class="section-copy">
+              Este bloque me sirve como arranque rápido. Si una plantilla se
+              repite mucho, la dejo aquí y dejo de reescribirla.
+            </p>
+          </div>
+        </div>
+
+        <div class="topic-stack">
+          <article class="doc-card">
+            <span class="card-tag">HTML base</span>
+            <h3>Plantilla inicial</h3>
+            <code class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Mi ejercicio&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Reset</span>
+            <h3>Base CSS</h3>
+            <code class="code-block">* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}</code>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Flex</span>
+            <h3>Navbar horizontal simple</h3>
+            <code class="code-block">nav {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  list-style: none;
+}</code>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

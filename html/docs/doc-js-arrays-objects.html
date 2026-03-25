@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arrays y objetos | Mi Hub de Desarrollo</title>
+  <script src="../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../css/hub-pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <div class="page">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="logo" href="../hub/index.html">
+        <div class="logo-mark">AD</div>
+        <div class="logo-copy">
+          <span class="logo-title">Alba Dev Hub</span>
+          <span class="logo-subtitle">Mi portfolio y mis prácticas</span>
+        </div>
+      </a>
+      <ul class="menu">
+        <li><a href="../hub/portfolio.html">Portafolio</a></li>
+        <li><a href="../hub/html-css.html">HTML y CSS</a></li>
+        <li><a class="active" href="../hub/documentation.html">Documentación</a></li>
+        <li><a href="../hub/javascript-react.html">JavaScript</a></li>
+      </ul>
+      <a class="cta" href="doc-js-base.html">Volver a JavaScript</a>
+    </nav>
+
+    <header class="hero">
+      <section class="hero-panel">
+        <span class="eyebrow">Arrays y objetos</span>
+        <h1>Aquí dejo la base de estructuras de datos que más voy a usar.</h1>
+        <p class="hero-text">
+          Esta ficha me sirve para ordenar mejor la información y trabajarla con
+          métodos sin perderme en datos sueltos.
+        </p>
+      </section>
+    </header>
+
+    <main id="contenido" class="content">
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Ficha de estudio</div>
+            <h2>Lo que quiero tener claro</h2>
+          </div>
+        </div>
+
+        <div class="study-grid">
+          <article class="study-card">
+            <span class="card-tag">Objetivo</span>
+            <h3>Guardar datos con estructura</h3>
+            <p>
+              Quiero dejar de trabajar solo con valores sueltos y empezar a pensar en colecciones y propiedades.
+            </p>
+          </article>
+
+          <article class="study-card">
+            <span class="card-tag">Error comun</span>
+            <h3>Confundir array con objeto</h3>
+            <p>
+              Un array me sirve para listas ordenadas; un objeto, para agrupar propiedades con nombre.
+            </p>
+          </article>
+
+          <article class="study-card">
+            <span class="card-tag">Regla</span>
+            <h3>Elegir la estructura antes del metodo</h3>
+            <p>
+              Antes de pensar en `map`, `filter` o acceso por punto, necesito saber si mis datos estan bien modelados.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Base</div>
+            <h2>Conceptos y métodos que quiero dominar</h2>
+          </div>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <span class="card-tag">Array</span>
+            <p>Listas ordenadas de elementos. Metodos útiles: `push`, `map`, `filter`, `find`.</p>
+          </article>
+          <article class="doc-card">
+            <span class="card-tag">Objeto</span>
+            <p>Conjunto de propiedades con clave y valor. Acceso comun: `objeto.propiedad`.</p>
+          </article>
+          <article class="doc-card">
+            <span class="card-tag">Combinacion</span>
+            <p>Muy frecuente: arrays de objetos para representar listas de tareas, productos o usuarios.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Ejemplo minimo</div>
+            <h2>Array de objetos</h2>
+          </div>
+        </div>
+
+        <article class="doc-card">
+          <code class="code-block">const tareas = [
+  { id: 1, titulo: "Repasar flexbox", hecha: true },
+  { id: 2, titulo: "Practicar DOM", hecha: false }
+];
+
+const pendientes = tareas.filter((tarea) => !tarea.hecha);</code>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

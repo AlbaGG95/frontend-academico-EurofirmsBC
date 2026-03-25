@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloques A-F con Wrap</title>
+  <script src="../../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../../css/exercise-theme.css" />
+  <style>
+    .layout-demo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 14px 0;
+      padding: 18px;
+      border: 1px solid rgba(31, 95, 99, 0.14);
+      border-radius: 24px;
+      background: linear-gradient(180deg, var(--surface-muted), var(--surface-strong));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    .layout-block {
+      width: 180px;
+      min-height: 180px;
+      padding: 16px;
+      border: 1px solid rgba(31, 95, 99, 0.16);
+      border-radius: 20px;
+      background: linear-gradient(180deg, var(--surface), var(--accent-soft));
+      box-shadow: 0 12px 24px rgba(35, 43, 54, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .layout-block::before {
+      content: "";
+      position: absolute;
+      inset: auto -20px -26px auto;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(31, 95, 99, 0.12), transparent 70%);
+      pointer-events: none;
+    }
+
+    .layout-block span {
+      display: inline-flex;
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--accent-alt);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(122, 89, 51, 0.08);
+    }
+
+    .layout-block h3 {
+      margin: 16px 0 10px;
+      font-size: 1.35rem;
+      font-family: "Cambria", "Constantia", "Georgia", serif;
+    }
+
+    .layout-block p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 860px) {
+      .layout-demo {
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .layout-block {
+        width: min(100%, 280px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <main id="contenido" class="exercise-page">
+    <a class="exercise-back" href="../../hub/html-css.html">Volver a HTML y CSS</a>
+
+    <section class="exercise-hero">
+      <span class="exercise-kicker">Ejercicio base de Flexbox</span>
+      <h1 class="exercise-title">Distribución de bloques con wrap y separación horizontal.</h1>
+      <p class="exercise-copy">
+        Esta práctica funciona como ejercicio fundacional del módulo. Sirve para
+        entender cómo se reparte el espacio en un contenedor flex, cómo actúa
+        el salto de línea y por qué esta base es útil para tareas más complejas.
+      </p>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Resultado visual del layout</h2>
+          <p class="exercise-note">
+            Los seis bloques muestran una distribución equilibrada con
+            <code>display: flex</code>, <code>justify-content: space-between</code>
+            y <code>flex-wrap</code>. Es una base que luego puede evolucionar
+            hacia galerías, cards o paneles de contenido.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-stage">
+        <div class="layout-demo" aria-label="Demostración de bloques flex con wrap">
+          <article class="layout-block">
+            <span>Slot 01</span>
+            <h3>Bloque A</h3>
+            <p>Primer bloque del layout, alineado al inicio de la fila.</p>
+          </article>
+
+          <article class="layout-block">
+            <span>Slot 02</span>
+            <h3>Bloque B</h3>
+            <p>Segundo módulo situado en la parte superior central.</p>
+          </article>
+
+          <article class="layout-block">
+            <span>Slot 03</span>
+            <h3>Bloque C</h3>
+            <p>Tercer bloque manteniendo el reparto horizontal.</p>
+          </article>
+
+          <article class="layout-block">
+            <span>Slot 04</span>
+            <h3>Bloque D</h3>
+            <p>Cierre de la primera fila dentro del contenedor flex.</p>
+          </article>
+
+          <article class="layout-block">
+            <span>Slot 05</span>
+            <h3>Bloque E</h3>
+            <p>Elemento que cae a la segunda fila al activarse el wrap.</p>
+          </article>
+
+          <article class="layout-block">
+            <span>Slot 06</span>
+            <h3>Bloque F</h3>
+            <p>Último bloque colocado al extremo de la fila inferior.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="exercise-grid">
+        <article class="exercise-item">
+          <strong>Objetivo</strong>
+          <h3>Comprender el contenedor flex</h3>
+          <p>
+            La práctica enseña a pensar primero en el contenedor y después en la
+            distribución de los elementos hijos.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Técnica</strong>
+          <h3>Reparto con space-between</h3>
+          <p>
+            <code>justify-content: space-between</code> reparte el espacio libre
+            entre los elementos de cada fila.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Continuidad</strong>
+          <h3>Base para otras fases</h3>
+          <p>
+            Este mismo ejercicio puede ampliarse con imágenes, cards o módulos
+            de contenido sin perder la lógica inicial.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
+
+

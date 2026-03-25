@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box model y Position | Mi Hub de Desarrollo</title>
+  <script src="../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../css/hub-pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <div class="page">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="logo" href="../hub/index.html">
+        <div class="logo-mark">AD</div>
+        <div class="logo-copy">
+          <span class="logo-title">Alba Dev Hub</span>
+          <span class="logo-subtitle">Mi portfolio y mis prácticas</span>
+        </div>
+      </a>
+
+      <ul class="menu">
+        <li><a href="../hub/portfolio.html">Portafolio</a></li>
+        <li><a href="../hub/html-css.html">HTML y CSS</a></li>
+        <li><a class="active" href="../hub/documentation.html">Documentación</a></li>
+        <li><a href="../hub/javascript-react.html">JavaScript</a></li>
+      </ul>
+
+      <a class="cta" href="doc-css-base.html">Volver a CSS</a>
+    </nav>
+
+    <header class="hero">
+      <section class="hero-panel">
+        <span class="eyebrow">Box model y Position</span>
+        <h1>Aquí separo caja y posicion para no mezclar conceptos.</h1>
+        <p class="hero-text">
+          Esta ficha me sirve para distinguir cuando un problema es de espacio,
+          de tamano o de posicion dentro del flujo.
+        </p>
+      </section>
+    </header>
+
+    <main id="contenido" class="content">
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Ficha de estudio</div>
+            <h2>Lo que quiero recordar antes de tocar el layout</h2>
+          </div>
+        </div>
+
+        <div class="study-grid">
+          <article class="study-card">
+            <span class="card-tag">Objetivo</span>
+            <h3>Separar espacio, tamano y posicion</h3>
+            <p>
+              Si se que parte del problema pertenece a la caja y cual a la posicion, resuelvo mucho antes.
+            </p>
+          </article>
+
+          <article class="study-card">
+            <span class="card-tag">Error comun</span>
+            <h3>Tocar `position` cuando el fallo era de caja</h3>
+            <p>
+              A veces el layout esta mal porque hay margen, padding o ancho incorrecto, no porque falte posicionamiento.
+            </p>
+          </article>
+
+          <article class="study-card">
+            <span class="card-tag">Regla</span>
+            <h3>Primero reviso box model</h3>
+            <p>
+              Antes de usar `absolute` o `fixed`, me interesa comprobar si el elemento ya esta mal dimensionado.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Box model</div>
+            <h2>Qué hace cada parte</h2>
+          </div>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <span class="card-tag">Espacio exterior</span>
+            <h3>`margin`</h3>
+            <p>Separa el elemento de lo que tiene alrededor.</p>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Borde</span>
+            <h3>`border`</h3>
+            <p>Es el limite visible del elemento.</p>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Espacio interior</span>
+            <h3>`padding`</h3>
+            <p>Da aire al contenido por dentro del elemento.</p>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Tamano</span>
+            <h3>`width` y `height`</h3>
+            <p>Definen el tamano del contenido si no cambio el modelo de caja.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Position</div>
+            <h2>Comportamientos que quiero distinguir</h2>
+          </div>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <span class="card-tag">Flujo normal</span>
+            <h3>`static`</h3>
+            <p>Es el comportamiento por defecto.</p>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Ajuste local</span>
+            <h3>`relative`</h3>
+            <p>Mueve el elemento sin sacarlo del flujo normal.</p>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Fuera del flujo</span>
+            <h3>`absolute`</h3>
+            <p>Se posiciona respecto al ancestro posicionado más cercano.</p>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Pegado a ventana</span>
+            <h3>`fixed`</h3>
+            <p>Se queda fijo respecto a la ventana del navegador.</p>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Mixto</span>
+            <h3>`sticky`</h3>
+            <p>Se comporta normal hasta que alcanza una posicion concreta al hacer scroll.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

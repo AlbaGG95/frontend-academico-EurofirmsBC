@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiplos de 7 del 1 al 100</title>
+  <script src="../../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../../css/exercise-theme.css" />
+  <style>
+
+    .summary-stage {
+      display: grid;
+      gap: 18px;
+    }
+
+    .summary-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+    }
+
+    .summary-box {
+      padding: 18px;
+      border: 1px solid rgba(31, 95, 99, 0.14);
+      border-radius: 20px;
+      background: linear-gradient(180deg, var(--surface), var(--surface-muted));
+    }
+
+    .summary-box span {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .summary-box strong {
+      display: block;
+      margin-top: 10px;
+      color: var(--accent-strong);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+    }
+
+    .summary-box p {
+      margin: 10px 0 0;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    .sequence-box {
+      padding: 20px;
+      border: 1px solid rgba(122, 89, 51, 0.18);
+      border-radius: 22px;
+      background: var(--panel-stage-bg);
+    }
+
+    .sequence-box h3 {
+      margin: 0 0 10px;
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+    }
+
+    .sequence-box p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <main id="contenido" class="exercise-page">
+    <a class="exercise-back" href="../../hub/javascript-react.html">Volver a JavaScript</a>
+
+    <section class="exercise-hero">
+      <span class="exercise-kicker">Bucle for + condicional if</span>
+      <h1 class="exercise-title">Contar cuantos numeros del 1 al 100 son multiplos de 7.</h1>
+      <p class="exercise-copy">
+        Esta practica recorre los numeros del 1 al 100 con un
+        <code>for</code>, usa un <code>if</code> para detectar si un numero es
+        multiplo de 7 y va sumando un contador cada vez que la condicion se
+        cumple. El resultado final se muestra en consola y tambien queda
+        documentado visualmente dentro de la pagina.
+      </p>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Objetivo del ejercicio</h2>
+          <p class="exercise-note">
+            La idea es practicar tres piezas basicas de JavaScript al mismo
+            tiempo: recorrido con bucle, comprobacion condicional y acumulacion
+            de resultados con una variable contador.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-grid">
+        <article class="exercise-item">
+          <strong>Paso 1</strong>
+          <h3>Recorrer del 1 al 100</h3>
+          <p>
+            El programa usa un <code>for</code> para avanzar numero a numero
+            desde 1 hasta 100 sin saltarse ningun valor.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Paso 2</strong>
+          <h3>Comprobar cada numero</h3>
+          <p>
+            Dentro del bucle se aplica <code>number % 7 === 0</code> para saber
+            si el valor actual es multiplo de 7.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Paso 3</strong>
+          <h3>Contar coincidencias</h3>
+          <p>
+            Cada vez que la condicion se cumple, el contador aumenta en una
+            unidad y el numero se registra para mostrarlo despues.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Vista tipo consola</h2>
+          <p class="exercise-note">
+            Este bloque replica la salida principal del ejercicio para que se
+            vea tanto el proceso como el total final sin depender solo de la
+            consola del navegador.
+          </p>
+        </div>
+      </div>
+
+      <div class="console-shell" aria-label="Salida visual de consola">
+        <div class="console-topbar" aria-hidden="true">
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+          <span class="console-label">Consola del ejercicio</span>
+        </div>
+        <div class="console-output" id="console-output" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Multiplos encontrados</h2>
+          <p class="exercise-note">
+            Cada tarjeta representa un numero detectado por el
+            <code>if</code>. Asi se ve con claridad en que momentos el contador
+            va aumentando.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-grid" id="multiples-list" aria-live="polite"></div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Resumen final</h2>
+          <p class="exercise-note">
+            Aqui queda la lectura rapida del ejercicio: cuantos numeros se han
+            revisado, cuantos multiplos de 7 han aparecido y cuales son esos
+            valores.
+          </p>
+        </div>
+      </div>
+
+      <div class="summary-stage">
+        <div class="summary-strip">
+          <article class="summary-box">
+            <span>Rango revisado</span>
+            <strong>1 a 100</strong>
+            <p>El bucle recorre cien numeros consecutivos.</p>
+          </article>
+
+          <article class="summary-box">
+            <span>Total de multiplos</span>
+            <strong id="total-count">Calculando...</strong>
+            <p>Este valor aumenta solo cuando el numero actual cumple la condicion.</p>
+          </article>
+        </div>
+
+        <div class="sequence-box">
+          <h3>Secuencia detectada</h3>
+          <p id="sequence-output">Esperando la ejecucion del script...</p>
+        </div>
+
+        <div class="exercise-grid" id="summary-results" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../../js/js-multiples-of-7.js"></script>
+</body>
+</html>
+
+
+
+
+

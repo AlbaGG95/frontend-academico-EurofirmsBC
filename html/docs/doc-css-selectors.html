@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selectores CSS | Mi Hub de Desarrollo</title>
+  <script src="../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../css/hub-pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <div class="page">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="logo" href="../hub/index.html">
+        <div class="logo-mark">AD</div>
+        <div class="logo-copy">
+          <span class="logo-title">Alba Dev Hub</span>
+          <span class="logo-subtitle">Mi portfolio y mis prácticas</span>
+        </div>
+      </a>
+
+      <ul class="menu">
+        <li><a href="../hub/portfolio.html">Portafolio</a></li>
+        <li><a href="../hub/html-css.html">HTML y CSS</a></li>
+        <li><a class="active" href="../hub/documentation.html">Documentación</a></li>
+        <li><a href="../hub/javascript-react.html">JavaScript</a></li>
+      </ul>
+
+      <a class="cta" href="doc-css-base.html">Volver a CSS</a>
+    </nav>
+
+    <header class="hero">
+      <section class="hero-panel">
+        <span class="eyebrow">Selectores CSS</span>
+        <h1>Aquí dejo lo que quiero recordar sobre selectores.</h1>
+        <p class="hero-text">
+          Esta ficha me ayuda a escribir reglas con más criterio y a no crear
+          selectores raros que luego sean dificiles de mantener.
+        </p>
+      </section>
+    </header>
+
+    <main id="contenido" class="content">
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Ficha de estudio</div>
+            <h2>Lo que quiero tener claro</h2>
+          </div>
+        </div>
+
+        <div class="study-grid">
+          <article class="study-card">
+            <span class="card-tag">Objetivo</span>
+            <h3>Apuntar al elemento correcto</h3>
+            <p>
+              Si el selector esta bien pensado, el CSS es más corto, más claro y más fácil de corregir.
+            </p>
+          </article>
+
+          <article class="study-card">
+            <span class="card-tag">Error comun</span>
+            <h3>Hacer selectores demasiado largos</h3>
+            <p>
+              Si necesito encadenar demasiadas partes para llegar a un elemento,
+              probablemente el HTML o las clases no estan bien planteados.
+            </p>
+          </article>
+
+          <article class="study-card">
+            <span class="card-tag">Regla</span>
+            <h3>Primero clases claras</h3>
+            <p>
+              Prefiero nombres de clase con sentido antes que selectores complejos para corregir estructura mala.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Tipos</div>
+            <h2>Selectores que más me conviene dominar</h2>
+          </div>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <span class="card-tag">Clase</span>
+            <h3>`.clase`</h3>
+            <p>La uso para estilos reutilizables y para mantener el CSS modular.</p>
+            <code class="code-block">.card {
+  border-radius: 18px;
+}</code>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">ID</span>
+            <h3>`#id`</h3>
+            <p>Solo lo uso si necesito algo verdaderamente unico en la página.</p>
+            <code class="code-block">#hero {
+  min-height: 100vh;
+}</code>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Descendiente</span>
+            <h3>`.padre .hijo`</h3>
+            <p>Me sirve cuando quiero afectar a un hijo dentro de un contexto concreto.</p>
+            <code class="code-block">.menu a {
+  color: white;
+}</code>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Hijo directo</span>
+            <h3>`.padre > .hijo`</h3>
+            <p>Lo uso cuando solo quiero afectar a los hijos inmediatos.</p>
+            <code class="code-block">.menu > li {
+  list-style: none;
+}</code>
+          </article>
+
+          <article class="doc-card">
+            <span class="card-tag">Pseudoclase</span>
+            <h3>`:hover`, `:first-child`, `:last-child`</h3>
+            <p>Sirven para estados o situaciones concretas sin tocar el HTML.</p>
+            <code class="code-block">a:hover {
+  opacity: 0.8;
+}</code>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
