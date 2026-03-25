@@ -34,10 +34,17 @@
   --panel-stage-bg: linear-gradient(180deg, #f8f5ee, #f2ece1);
   --toggle-bg: rgba(255, 252, 246, 0.92);
   --toggle-border: rgba(31, 95, 99, 0.18);
-  --console-bg: #0f1722;
-  --console-text: #eaf4ff;
-  --console-step: #8fe2d6;
-  --console-error: #ffb4b4;
+  --console-bg: #0c0c0c;
+  --console-text: #d4d4d4;
+  --console-step: #85e89d;
+  --console-error: #ff7b72;
+  --console-frame: #2b2b2b;
+  --console-topbar-bg: linear-gradient(180deg, #1f1f1f, #171717);
+  --console-topbar-border: rgba(255, 255, 255, 0.08);
+  --console-dot: #6f6f6f;
+  --console-label-text: #d4d4d4;
+  --console-shadow: 0 18px 36px rgba(0, 0, 0, 0.24);
+  --console-inset: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 :root[data-theme="dark"] {
@@ -72,10 +79,17 @@
   --panel-stage-bg: linear-gradient(180deg, #101c2a, #0d1724);
   --toggle-bg: rgba(12, 18, 28, 0.92);
   --toggle-border: rgba(100, 136, 168, 0.24);
-  --console-bg: #08111b;
-  --console-text: #eef3f8;
-  --console-step: #8fe2d6;
-  --console-error: #ffb4b4;
+  --console-bg: #0c0c0c;
+  --console-text: #d4d4d4;
+  --console-step: #85e89d;
+  --console-error: #ff7b72;
+  --console-frame: #2b2b2b;
+  --console-topbar-bg: linear-gradient(180deg, #1f1f1f, #171717);
+  --console-topbar-border: rgba(255, 255, 255, 0.08);
+  --console-dot: #6f6f6f;
+  --console-label-text: #d4d4d4;
+  --console-shadow: 0 18px 36px rgba(0, 0, 0, 0.34);
+  --console-inset: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 * {
@@ -307,44 +321,52 @@ a {
 }
 
 .console-shell {
-  border: 1px solid rgba(31, 95, 99, 0.14);
-  border-radius: 20px;
+  border: 1px solid var(--console-frame);
+  border-radius: 14px;
   overflow: hidden;
-  background: var(--surface);
-  box-shadow: 0 10px 24px rgba(35, 43, 54, 0.08);
+  background: var(--console-bg);
+  box-shadow: var(--console-shadow);
 }
 
 .console-topbar {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 16px;
-  border-bottom: 1px solid rgba(31, 95, 99, 0.12);
-  background: var(--surface-muted);
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--console-topbar-border);
+  background: var(--console-topbar-bg);
 }
 
 .console-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: var(--accent-alt);
-  opacity: 0.7;
+  background: var(--console-dot);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
 .console-label {
   margin-left: 6px;
-  color: var(--text-soft);
-  font-size: 0.88rem;
-  font-weight: 700;
+  color: var(--console-label-text);
+  font-family: "Cascadia Mono", "Consolas", "Courier New", monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.console-label::before {
+  content: "MINGW64 ";
+  color: var(--console-step);
 }
 
 .console-output {
   padding: 18px;
   background: var(--console-bg);
   color: var(--console-text);
-  font-family: "Consolas", "Courier New", monospace;
-  font-size: 0.95rem;
-  line-height: 1.7;
+  box-shadow: var(--console-inset);
+  font-family: "Cascadia Mono", "Consolas", "Courier New", monospace;
+  font-size: 0.94rem;
+  line-height: 1.72;
   white-space: pre-wrap;
 }
 
@@ -457,5 +479,3 @@ a:focus-visible {
     scroll-behavior: auto !important;
   }
 }
-
-
