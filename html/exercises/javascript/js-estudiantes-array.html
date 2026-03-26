@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Array de estudiantes en JavaScript</title>
+  <script src="../../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../../css/exercise-theme.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <main id="contenido" class="exercise-page">
+    <a class="exercise-back" href="../../hub/javascript-react.html">Volver a JavaScript</a>
+
+    <section class="exercise-hero">
+      <span class="exercise-kicker">Arrays + objetos</span>
+      <h1 class="exercise-title">Gestion basica de estudiantes con un array de objetos.</h1>
+      <p class="exercise-copy">
+        Esta practica crea un array llamado <code>estudiantes</code> con varios
+        objetos y una funcion <code>agregarEstudiante(nombre, edad, notas)</code>
+        que inserta un nuevo estudiante en la coleccion.
+      </p>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Que se practica</h2>
+          <p class="exercise-note">
+            El objetivo es acostumbrarse a trabajar con arrays de objetos,
+            propiedades accesibles por nombre y una funcion que modifica la
+            estructura de datos sin perder claridad.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-grid">
+        <article class="exercise-item">
+          <strong>Array</strong>
+          <h3>Coleccion inicial</h3>
+          <p>
+            El ejercicio parte de varios estudiantes ya guardados con nombre,
+            edad y notas.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Funcion</strong>
+          <h3>Agregar un nuevo objeto</h3>
+          <p>
+            La funcion recibe tres datos y construye un nuevo objeto para
+            insertarlo con <code>push</code> dentro del array.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Resultado</strong>
+          <h3>Array actualizado</h3>
+          <p>
+            Despues de ejecutar la funcion, el nuevo estudiante queda disponible
+            junto al resto de elementos del array.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Vista tipo consola</h2>
+          <p class="exercise-note">
+            Este bloque muestra el array inicial, el nuevo estudiante agregado y
+            el estado final de la coleccion.
+          </p>
+        </div>
+      </div>
+
+      <div class="console-shell" aria-label="Salida visual de consola">
+        <div class="console-topbar" aria-hidden="true">
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+          <span class="console-label">estudiantes.js</span>
+        </div>
+        <div class="console-output" id="console-output" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Estudiantes iniciales</h2>
+          <p class="exercise-note">
+            Aqui se renderiza la coleccion antes de llamar a la funcion.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-grid" id="initial-students" aria-live="polite"></div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Array despues de agregar</h2>
+          <p class="exercise-note">
+            El estudiante nuevo aparece junto a los ya existentes una vez que
+            la funcion termina su trabajo.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-grid" id="updated-students" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="../../../js/js-estudiantes-array.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funcion sumarHasta en JavaScript</title>
+  <script src="../../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../../css/exercise-theme.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <main id="contenido" class="exercise-page">
+    <a class="exercise-back" href="../../hub/javascript-react.html">Volver a JavaScript</a>
+
+    <section class="exercise-hero">
+      <span class="exercise-kicker">Funciones + validacion</span>
+      <h1 class="exercise-title">sumarHasta(numero): validar y acumular desde 1.</h1>
+      <p class="exercise-copy">
+        Esta practica crea una funcion que recibe un numero, comprueba si es
+        mayor que 0 y devuelve la suma acumulada entre 1 y ese valor. Si el
+        dato no es valido, muestra un error y devuelve <code>-1</code>.
+      </p>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Que se practica</h2>
+          <p class="exercise-note">
+            El ejercicio combina validacion basica, recorrido con
+            <code>for</code> y acumulacion en una variable para resolver una
+            operacion sencilla pero muy tipica en JavaScript.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-grid">
+        <article class="exercise-item">
+          <strong>Paso 1</strong>
+          <h3>Validar el parametro</h3>
+          <p>
+            Se comprueba que el valor recibido sea un numero finito y mayor que
+            0 antes de hacer cualquier suma.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Paso 2</strong>
+          <h3>Recorrer del 1 al numero</h3>
+          <p>
+            Un bucle <code>for</code> avanza numero a numero para ir agregando
+            cada valor a la suma total.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Paso 3</strong>
+          <h3>Devolver el resultado</h3>
+          <p>
+            Si el dato es valido, la funcion devuelve la suma; si no lo es,
+            deja un error en consola y devuelve <code>-1</code>.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Vista tipo consola</h2>
+          <p class="exercise-note">
+            Aqui se ven las pruebas del ejercicio con un caso correcto, un caso
+            minimo y un caso invalido.
+          </p>
+        </div>
+      </div>
+
+      <div class="console-shell" aria-label="Salida visual de consola">
+        <div class="console-topbar" aria-hidden="true">
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+          <span class="console-label">sumarHasta.js</span>
+        </div>
+        <div class="console-output" id="console-output" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Ejemplos resueltos</h2>
+          <p class="exercise-note">
+            Cada tarjeta resume una llamada real de la funcion y el valor que
+            devuelve segun el enunciado.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-grid" id="examples-results" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="../../../js/js-sumar-hasta.js"></script>
+</body>
+</html>

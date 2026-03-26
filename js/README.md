@@ -9,6 +9,7 @@ Esta carpeta agrupa los scripts del proyecto.
 - `js-variable-types.js`: ejercicio de variables y tipos
 - `js-multiples-of-7.js`: ejercicio de bucles y conteo
 - `js-sumar-hasta.js`: ejercicio de funciones con suma acumulada
+- `js-estudiantes-array.js`: ejercicio de arrays y objetos con estudiantes
 
 ## Regla de uso
 

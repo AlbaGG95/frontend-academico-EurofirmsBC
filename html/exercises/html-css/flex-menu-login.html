@@ -2,38 +2,147 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="2; url=./index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redirección | Portfolio Académico</title>
+  <title>Menu con Login y Flexbox</title>
   <script src="../../../js/theme-toggle.js"></script>
-  <link rel="stylesheet" href="../../../css/hub-pages.css" />
+  <link rel="stylesheet" href="../../../css/exercise-theme.css" />
+  <style>
+    .menu-demo {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 18px 20px;
+      border: 1px solid rgba(31, 95, 99, 0.16);
+      border-radius: 22px;
+      background: linear-gradient(180deg, var(--surface), var(--surface-muted));
+      box-shadow: 0 18px 34px rgba(35, 43, 54, 0.08);
+    }
+
+    .menu-brand {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent-strong);
+    }
+
+    .menu-links {
+      display: flex;
+      flex: 1;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .menu-links a,
+    .menu-login,
+    .menu-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .menu-links a,
+    .menu-login {
+      color: var(--text-soft);
+      background: rgba(255, 255, 255, 0.56);
+      border: 1px solid rgba(31, 95, 99, 0.12);
+    }
+
+    .menu-cta {
+      color: var(--cta-text);
+      background: linear-gradient(145deg, var(--cta-start), var(--cta-end));
+      box-shadow: 0 12px 22px rgba(31, 95, 99, 0.18);
+    }
+
+    @media (max-width: 840px) {
+      .menu-demo {
+        flex-wrap: wrap;
+      }
+
+      .menu-links {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-  <div class="page">
-    <main id="contenido" class="content">
-      <section class="section">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Redirección</div>
-            <h1>Esta página ahora forma parte del hub principal.</h1>
-            <p class="section-copy">
-              Vas a ser redirigida automáticamente a la portada del proyecto. Si
-              no ocurre, puedes continuar desde el enlace manual.
-            </p>
-          </div>
-        </div>
+  <main id="contenido" class="exercise-page">
+    <a class="exercise-back" href="../../hub/html-css.html">Volver a HTML y CSS</a>
 
-        <div class="button-row">
-          <a class="cta" href="../../hub/index.html">Ir al inicio</a>
-          <a class="ghost-link" href="../../hub/html-css.html">Ver HTML y CSS</a>
+    <section class="exercise-hero">
+      <span class="exercise-kicker">Menu + login</span>
+      <h1 class="exercise-title">Barra horizontal con menu, acceso y llamada a la accion.</h1>
+      <p class="exercise-copy">
+        Esta practica trabaja un patron muy comun: enlaces de navegacion, boton
+        de login y una accion principal dentro de una misma fila flexible.
+      </p>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Resultado visual</h2>
+          <p class="exercise-note">
+            El contenedor flex reparte marca, enlaces y acciones con una
+            jerarquia clara para escritorio y una reorganizacion sencilla en
+            pantallas mas estrechas.
+          </p>
         </div>
-      </section>
-    </main>
-  </div>
+      </div>
+
+      <div class="exercise-stage">
+        <nav class="menu-demo" aria-label="Demostracion de menu con login">
+          <div class="menu-brand">AD Hub</div>
+
+          <ul class="menu-links">
+            <li><a href="../../hub/index.html">Inicio</a></li>
+            <li><a href="../../hub/html-css.html">HTML y CSS</a></li>
+            <li><a href="../../hub/documentation.html">Documentacion</a></li>
+          </ul>
+
+          <a class="menu-login" href="../../hub/portfolio.html">Login</a>
+          <a class="menu-cta" href="../../hub/javascript-react.html">Explorar</a>
+        </nav>
+      </div>
+
+      <div class="exercise-grid">
+        <article class="exercise-item">
+          <strong>Objetivo</strong>
+          <h3>Separar zonas de contenido</h3>
+          <p>
+            La marca queda a un lado, los enlaces ocupan el centro y las
+            acciones finales se mantienen visibles en la misma barra.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Tecnica</strong>
+          <h3>Reparto con flex</h3>
+          <p>
+            El menu usa <code>display: flex</code> para repartir espacio sin
+            depender de posiciones fijas ni margenes manuales complejos.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Escalado</strong>
+          <h3>Adaptacion sencilla</h3>
+          <p>
+            Cuando el ancho se reduce, la barra puede reorganizar sus elementos
+            en varias lineas sin perder legibilidad.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
-
-
-
