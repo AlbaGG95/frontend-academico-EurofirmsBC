@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos avanzados con delegacion en JavaScript</title>
+  <script src="../../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../../css/exercise-theme.css" />
+  <style>
+    .events-stage {
+      display: grid;
+      gap: 18px;
+    }
+
+    .events-board {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      gap: 20px;
+      min-height: 260px;
+      padding: clamp(20px, 5vw, 38px);
+      border: 1px solid rgba(154, 128, 89, 0.28);
+      border-radius: 26px;
+      background: linear-gradient(180deg, #dcc3d8, #d5bad1);
+    }
+
+    :root[data-theme="dark"] .events-board {
+      background: linear-gradient(180deg, #322134, #2a1d2f);
+      border-color: rgba(211, 170, 120, 0.24);
+    }
+
+    .event-box {
+      width: 104px;
+      min-height: 104px;
+      padding: 10px;
+      border: 1px solid rgba(35, 43, 54, 0.8);
+      border-radius: 0;
+      background: var(--box-color, #dbe6f5);
+      color: #000000;
+      text-align: center;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      line-height: 1.2;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    :root[data-theme="dark"] .event-box {
+      color: #06131d;
+    }
+
+    .event-box:hover {
+      transform: translateY(-2px);
+    }
+
+    .event-box.active {
+      box-shadow: 0 0 0 3px rgba(22, 63, 67, 0.45);
+      transform: translateY(-4px);
+    }
+
+    .event-box[data-item-id="a"] {
+      --box-color: #a9c4e3;
+    }
+
+    .event-box[data-item-id="b"] {
+      --box-color: #93ce95;
+    }
+
+    .event-box[data-item-id="c"] {
+      --box-color: #cf8ab0;
+    }
+
+    .event-box[data-item-id="d"] {
+      --box-color: #d6de48;
+    }
+
+    .event-box-label {
+      display: block;
+      white-space: pre-line;
+    }
+
+    .event-panel {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+    }
+
+    .event-stat {
+      padding: 16px;
+      border: 1px solid rgba(31, 95, 99, 0.14);
+      border-radius: 18px;
+      background: linear-gradient(180deg, var(--surface), var(--surface-muted));
+    }
+
+    .event-stat h3 {
+      margin: 0 0 8px;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+    }
+
+    .event-stat p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    .event-value {
+      display: inline-flex;
+      margin-top: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      font-family: "Cascadia Mono", "Consolas", "Courier New", monospace;
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <main id="contenido" class="exercise-page">
+    <a class="exercise-back" href="../../hub/javascript-react.html">Volver a JavaScript</a>
+
+    <section class="exercise-hero">
+      <span class="exercise-kicker">DOM + eventos avanzados</span>
+      <h1 class="exercise-title">Delegacion de eventos con una zona de elementos clicables.</h1>
+      <p class="exercise-copy">
+        Esta practica usa un unico listener sobre un contenedor para capturar
+        eventos de varios elementos hijos. Cada caja tiene un
+        <code>data-item-id</code> y al interactuar se muestra que elemento
+        disparo el evento, cuantas veces se ha pulsado y cual fue el ultimo
+        tipo de interaccion.
+      </p>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Que se practica</h2>
+          <p class="exercise-note">
+            Se combinan <code>event.target</code>, <code>closest()</code>,
+            atributos <code>data-*</code> y estado visual para trabajar eventos
+            avanzados sin repetir listeners por cada bloque.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-grid">
+        <article class="exercise-item">
+          <strong>Delegacion</strong>
+          <h3>Un listener para todo</h3>
+          <p>
+            El manejador vive en el contenedor y detecta sobre que caja se hizo
+            click o accion de teclado.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Dataset</strong>
+          <h3>Identificar cada item</h3>
+          <p>
+            Cada caja define su identificador con
+            <code>data-item-id="a|b|c|d"</code>.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Estado</strong>
+          <h3>Feedback inmediato</h3>
+          <p>
+            La interfaz marca la caja activa, acumula contador por item y deja
+            traza en una salida tipo consola.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Zona interactiva</h2>
+          <p class="exercise-note">
+            Haz click en una caja o navega con <code>Tab</code> y pulsa
+            <code>Enter</code> o <code>Espacio</code> para disparar eventos.
+          </p>
+        </div>
+      </div>
+
+      <div class="events-stage">
+        <div class="events-board" id="event-board" aria-label="Contenedor de items con delegacion de eventos">
+          <button class="event-box" type="button" data-item-id="a">
+            <span class="event-box-label">div with
+item-id:
+a</span>
+          </button>
+          <button class="event-box" type="button" data-item-id="b">
+            <span class="event-box-label">div with
+item-id
+b</span>
+          </button>
+          <button class="event-box" type="button" data-item-id="c">
+            <span class="event-box-label">div with
+item-id
+c</span>
+          </button>
+          <button class="event-box" type="button" data-item-id="d">
+            <span class="event-box-label">div with
+item-id
+d</span>
+          </button>
+        </div>
+
+        <div class="event-panel" aria-live="polite">
+          <article class="event-stat">
+            <h3>Item seleccionado</h3>
+            <p>Ultima caja capturada por el listener delegado.</p>
+            <span class="event-value" id="selected-id">Ninguno</span>
+          </article>
+          <article class="event-stat">
+            <h3>Total de eventos</h3>
+            <p>Numero total de interacciones detectadas en la zona.</p>
+            <span class="event-value" id="total-events">0</span>
+          </article>
+          <article class="event-stat">
+            <h3>Ultimo origen</h3>
+            <p>Indica si el disparo llego por click o por teclado.</p>
+            <span class="event-value" id="last-source">Sin actividad</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Contador por item</h2>
+          <p class="exercise-note">
+            Estos contadores se actualizan cada vez que un item dispara el
+            evento delegado.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-grid" aria-live="polite">
+        <article class="exercise-item">
+          <strong>item-id a</strong>
+          <h3>Interacciones registradas</h3>
+          <p><span class="event-value" data-counter-for="a">0</span></p>
+        </article>
+        <article class="exercise-item">
+          <strong>item-id b</strong>
+          <h3>Interacciones registradas</h3>
+          <p><span class="event-value" data-counter-for="b">0</span></p>
+        </article>
+        <article class="exercise-item">
+          <strong>item-id c</strong>
+          <h3>Interacciones registradas</h3>
+          <p><span class="event-value" data-counter-for="c">0</span></p>
+        </article>
+        <article class="exercise-item">
+          <strong>item-id d</strong>
+          <h3>Interacciones registradas</h3>
+          <p><span class="event-value" data-counter-for="d">0</span></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Vista tipo consola</h2>
+          <p class="exercise-note">
+            Registro en tiempo real del item detectado por delegacion.
+          </p>
+        </div>
+      </div>
+
+      <div class="console-shell" aria-label="Salida visual de consola">
+        <div class="console-topbar" aria-hidden="true">
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+          <span class="console-label">eventos-avanzados-2.js</span>
+        </div>
+        <div class="console-output" id="console-output" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../../js/js-eventos-avanzados-2.js"></script>
+</body>
+</html>

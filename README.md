@@ -43,6 +43,9 @@ Practicas introductorias de logica y manipulacion del contenido:
 - variables y tipos de dato
 - mensaje personal construido con variables
 - conteo de multiplos de 7 con `for` e `if`
+- validacion de formulario con `submit`
+- arrays de objetos con estudiantes
+- delegacion de eventos con `data-item-id`
 
 ### Ruta futura hacia React
 Aunque React todavia no forma parte del codigo implementado en este repositorio,
@@ -90,6 +93,7 @@ Las paginas de la raiz redirigen al contenido real organizado dentro de
 |   |   `-- javascript/
 |   `-- hub/
 |-- js/
+|   |-- js-eventos-avanzados-2.js
 |   |-- js-multiples-of-7.js
 |   |-- js-profile-message.js
 |   |-- js-variable-types.js
@@ -127,6 +131,7 @@ Contiene scripts reutilizables y logica de ejercicios.
 - `js-variable-types.js`: ejercicio de variables y tipos
 - `js-profile-message.js`: ejercicio de mensaje personal
 - `js-multiples-of-7.js`: ejercicio de bucles y conteo
+- `js-eventos-avanzados-2.js`: ejercicio de delegacion de eventos por item
 
 ### `assets/`
 Contiene recursos estaticos.

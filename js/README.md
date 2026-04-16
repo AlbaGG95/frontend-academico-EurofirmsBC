@@ -10,6 +10,7 @@ Esta carpeta agrupa los scripts del proyecto.
 - `js-multiples-of-7.js`: ejercicio de bucles y conteo
 - `js-sumar-hasta.js`: ejercicio de funciones con suma acumulada
 - `js-estudiantes-array.js`: ejercicio de arrays y objetos con estudiantes
+- `js-eventos-avanzados-2.js`: ejercicio de delegacion de eventos con `data-item-id`
 
 ## Regla de uso
 
