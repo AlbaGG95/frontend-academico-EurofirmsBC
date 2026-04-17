@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Lista de Peliculas - Ejercicio 1</title>
+  <script src="../../../js/theme-toggle.js"></script>
+  <link rel="stylesheet" href="../../../css/exercise-theme.css" />
+  <style>
+    .movie-counter {
+      margin: 0;
+      color: var(--text-soft);
+      font-style: italic;
+    }
+
+    .movie-list {
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .movie-list-item {
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(31, 95, 99, 0.2);
+      border-left: 5px solid var(--accent);
+      background: var(--surface);
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <main id="contenido" class="exercise-page">
+    <a class="exercise-back" href="../../hub/javascript-react.html">Volver a JavaScript</a>
+
+    <section class="exercise-hero">
+      <span class="exercise-kicker">Arrays + DOM basico</span>
+      <h1 class="exercise-title">Mi lista de peliculas con renderizado dinamico.</h1>
+      <p class="exercise-copy">
+        Este ejercicio practica la parte mas basica de arrays y manipulacion
+        del DOM: recorrer una lista de titulos, crear nodos <code>&lt;li&gt;</code>
+        y mostrarlos en pantalla dentro de un <code>&lt;ul&gt;</code> junto al
+        contador total de peliculas.
+      </p>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Pasos del ejercicio</h2>
+          <p class="exercise-note">
+            La practica esta pensada para hacer el recorrido completo desde el
+            array hasta el DOM usando un bucle <code>for</code>.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-grid">
+        <article class="exercise-item">
+          <strong>Paso 1</strong>
+          <h3>Crear el array</h3>
+          <p>
+            Declarar <code>peliculas</code> con al menos cinco titulos.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Paso 2</strong>
+          <h3>Recorrer la coleccion</h3>
+          <p>
+            Usar un bucle <code>for</code> para leer cada titulo.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Paso 3</strong>
+          <h3>Crear elementos</h3>
+          <p>
+            Generar cada <code>&lt;li&gt;</code> con
+            <code>document.createElement</code>.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Paso 4</strong>
+          <h3>Asignar contenido</h3>
+          <p>
+            Cargar el titulo con <code>.textContent</code> en cada elemento.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Paso 5</strong>
+          <h3>Anadir al UL</h3>
+          <p>
+            Insertar cada item en <code>#lista-peliculas</code> con
+            <code>.appendChild</code>.
+          </p>
+        </article>
+
+        <article class="exercise-item">
+          <strong>Paso 6</strong>
+          <h3>Actualizar contador</h3>
+          <p>
+            Mostrar en <code>#contador</code> cuantas peliculas hay en total.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Resultado en pantalla</h2>
+          <p class="exercise-note">
+            Este bloque muestra directamente la lista renderizada desde
+            JavaScript y el contador final.
+          </p>
+        </div>
+      </div>
+
+      <div class="exercise-stage">
+        <p id="contador" class="movie-counter">Tienes 0 peliculas en tu lista.</p>
+        <ul id="lista-peliculas" class="movie-list" aria-live="polite"></ul>
+      </div>
+    </section>
+
+    <section class="exercise-panel">
+      <div class="exercise-section-head">
+        <div>
+          <h2 class="exercise-subtitle">Vista tipo consola</h2>
+          <p class="exercise-note">
+            Se refleja tambien la salida para seguir el orden de ejecucion.
+          </p>
+        </div>
+      </div>
+
+      <div class="console-shell" aria-label="Salida visual de consola">
+        <div class="console-topbar" aria-hidden="true">
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+          <span class="console-label">lista-peliculas.js</span>
+        </div>
+        <div class="console-output" id="console-output" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../../js/js-lista-peliculas.js"></script>
+</body>
+</html>

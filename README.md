@@ -43,8 +43,10 @@ Practicas introductorias de logica y manipulacion del contenido:
 - variables y tipos de dato
 - mensaje personal construido con variables
 - conteo de multiplos de 7 con `for` e `if`
+- funcion `sumarHasta(numero)` con validacion basica
 - validacion de formulario con `submit`
 - arrays de objetos con estudiantes
+- lista de peliculas renderizada con arrays y DOM
 - delegacion de eventos con `data-item-id`
 
 ### Ruta futura hacia React
@@ -93,10 +95,14 @@ Las paginas de la raiz redirigen al contenido real organizado dentro de
 |   |   `-- javascript/
 |   `-- hub/
 |-- js/
+|   |-- js-estudiantes-array.js
 |   |-- js-eventos-avanzados-2.js
+|   |-- js-lista-peliculas.js
 |   |-- js-multiples-of-7.js
 |   |-- js-profile-message.js
+|   |-- js-sumar-hasta.js
 |   |-- js-variable-types.js
+|   |-- README.md
 |   `-- theme-toggle.js
 |-- documentation.html
 |-- html-css.html
@@ -131,6 +137,9 @@ Contiene scripts reutilizables y logica de ejercicios.
 - `js-variable-types.js`: ejercicio de variables y tipos
 - `js-profile-message.js`: ejercicio de mensaje personal
 - `js-multiples-of-7.js`: ejercicio de bucles y conteo
+- `js-sumar-hasta.js`: ejercicio de funcion con validacion y acumulacion
+- `js-estudiantes-array.js`: ejercicio de arrays de objetos con alta de estudiantes
+- `js-lista-peliculas.js`: ejercicio de arrays y renderizado de lista en el DOM
 - `js-eventos-avanzados-2.js`: ejercicio de delegacion de eventos por item
 
 ### `assets/`
